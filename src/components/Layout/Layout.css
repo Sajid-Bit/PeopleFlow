@@ -94,6 +94,9 @@
   background: transparent;
   flex-direction: row-reverse;
   justify-content: space-between;
+  cursor: pointer;
+  width: 100%;
+  text-align: right;
 }
 
 .layout__link span {
@@ -128,4 +131,3 @@
   direction: rtl;
   background: #fef6fd;
 }
-
