@@ -9,22 +9,22 @@
 .reports__card {
   width: min(640px, 100%);
   background: #ffffff;
-  border-radius: 20px;
+  border: 1px solid #ad7ba0;
   padding: 3rem 2.5rem;
-  box-shadow: 0 25px 50px -12px rgba(15, 23, 42, 0.2);
   text-align: center;
 }
 
 .reports__card h1 {
   margin-bottom: 1.25rem;
-  font-size: 2.25rem;
-  color: #0f172a;
+  font-size: 2rem;
+  font-weight: 600;
+  color: #7f057c;
 }
 
 .reports__card p {
   margin: 0;
-  font-size: 1.1rem;
-  color: #475569;
-  line-height: 1.8;
+  font-size: 1rem;
+  color: #65215c;
+  line-height: 1.6;
 }
 

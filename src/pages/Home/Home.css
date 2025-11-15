@@ -4,8 +4,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 3rem 2rem;
-  color: #1f2933;
+  padding: 2rem;
+  color: #65215c;
   direction: rtl;
 }
 
@@ -13,22 +13,21 @@
   max-width: 800px;
   text-align: center;
   background: #ffffff;
-  border-radius: 20px;
-  padding: 4rem 3rem;
-  box-shadow: 0 25px 50px -12px rgba(15, 23, 42, 0.25);
+  border: 1px solid #ad7ba0;
+  padding: 3rem 2rem;
 }
 
 .home__content h1 {
   margin-bottom: 1.5rem;
-  font-size: 3rem;
-  font-weight: 700;
-  color: #1f2937;
+  font-size: 2rem;
+  font-weight: 600;
+  color: #7f057c;
 }
 
 .home__subtitle {
   margin: 0;
-  font-size: 1.25rem;
-  color: #475569;
-  line-height: 1.8;
+  font-size: 1rem;
+  color: #65215c;
+  line-height: 1.6;
 }
 
