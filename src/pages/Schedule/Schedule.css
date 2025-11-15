@@ -1,0 +1,30 @@
+.schedule {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.schedule__card {
+  width: min(640px, 100%);
+  background: #ffffff;
+  border: 1px solid #ad7ba0;
+  padding: 3rem 2.5rem;
+  text-align: center;
+}
+
+.schedule__card h1 {
+  margin-bottom: 1.25rem;
+  font-size: 2rem;
+  font-weight: 600;
+  color: #7f057c;
+}
+
+.schedule__card p {
+  margin: 0;
+  font-size: 1rem;
+  color: #65215c;
+  line-height: 1.6;
+}
+

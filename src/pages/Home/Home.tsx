@@ -4,9 +4,9 @@ function Home() {
   return (
     <main className="home">
       <section className="home__content">
-        <h1>مرحباً بك في PeopleFlow</h1>
+        <h1>لوحة التحكم</h1>
         <p className="home__subtitle">
-          نظام إدارة الفريق الخاص بك. ابدأ في إدارة مشاريعك وفريقك بكفاءة.
+          مرحباً بك في بوابة DCU. استعرض المعلومات والإحصائيات المهمة.
         </p>
       </section>
     </main>

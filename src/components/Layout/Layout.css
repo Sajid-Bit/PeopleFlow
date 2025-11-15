@@ -2,23 +2,61 @@
   width: 100vw;
   height: 100vh;
   display: flex;
-  flex-direction: row-reverse;
-  background: #fef6fd;
+  flex-direction: row;
+  background: #ffffff;
   color: #65215c;
-  direction: ltr;
+  direction: rtl;
 }
 
 .layout__sidebar {
   width: 260px;
-  background: #7f057c;
-  color: #ffffff;
+  background: #ffffff;
+  color: #616161;
   padding: 2rem 1.5rem;
   display: flex;
   flex-direction: column;
-  gap: 2rem;
-  border-left: 1px solid #8e4587;
+  gap: 0;
+  border-right: 1px solid #e0e0e0;
   direction: rtl;
   text-align: right;
+}
+
+.layout__header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 3rem;
+  padding-top: 0.5rem;
+  flex-direction: row;
+}
+
+.layout__header-icon {
+  width: 20px;
+  height: 20px;
+  color: #7f057c;
+  flex-shrink: 0;
+  direction: ltr;
+}
+
+.layout__header-text {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #212121;
+  margin: 0;
+}
+
+.layout__brand {
+  font-size: 1.75rem;
+  font-weight: 600;
+  color: #ffffff;
+  margin: 0;
+}
+
+.layout__dcu {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #f4bee7;
+  margin: 0;
 }
 
 .layout__logo {
@@ -26,6 +64,7 @@
   font-size: 1.5rem;
   font-weight: 600;
   color: #ffffff;
+  direction: ltr;
 }
 
 .layout__nav {
@@ -34,22 +73,49 @@
   padding: 0;
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
+  gap: 0.25rem;
+}
+
+.layout__nav--bottom {
+  margin-top: auto;
+  padding-top: 2rem;
 }
 
 .layout__link {
-  display: block;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
   padding: 0.75rem 1rem;
-  border: 1px solid transparent;
+  border: none;
   font-weight: 500;
-  color: #ffffff;
+  font-size: 0.95rem;
+  color: #616161;
   text-decoration: none;
+  background: transparent;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+}
+
+.layout__link span {
+  flex: 1;
+  text-align: right;
+}
+
+.layout__icon {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+  color: currentColor;
+  direction: ltr;
 }
 
 .layout__link--active {
-  background: #ffffff;
+  background: #f4bee7;
   color: #7f057c;
-  border-color: #ad7ba0;
+}
+
+.layout__link--active .layout__icon {
+  color: #7f057c;
 }
 
 .layout__content {

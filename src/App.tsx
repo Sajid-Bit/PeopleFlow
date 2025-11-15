@@ -1,8 +1,10 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Login from './pages/Login/Login'
 import Home from './pages/Home/Home'
-import UserManage from './pages/UserManage/UserManage'
-import Reports from './pages/Reports/Reports'
+import Schedule from './pages/Schedule/Schedule'
+import Patients from './pages/Patients/Patients'
+import Messages from './pages/Messages/Messages'
+import Profile from './pages/Profile/Profile'
 import Layout from './components/Layout/Layout'
 
 function App() {
@@ -12,8 +14,10 @@ function App() {
         <Route path="/" element={<Login />} />
         <Route element={<Layout />}>
           <Route path="/home" element={<Home />} />
-          <Route path="/users" element={<UserManage />} />
-          <Route path="/reports" element={<Reports />} />
+          <Route path="/schedule" element={<Schedule />} />
+          <Route path="/patients" element={<Patients />} />
+          <Route path="/messages" element={<Messages />} />
+          <Route path="/profile" element={<Profile />} />
         </Route>
       </Routes>
     </BrowserRouter>
