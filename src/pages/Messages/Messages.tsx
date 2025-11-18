@@ -5,9 +5,7 @@ function Messages() {
     <main className="messages">
       <section className="messages__card">
         <h1>الرسائل</h1>
-        <p>
-          عرض وإدارة رسائلك والتواصل.
-        </p>
+
       </section>
     </main>
   )
