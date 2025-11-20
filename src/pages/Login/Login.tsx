@@ -5,16 +5,47 @@ import './Login.css'
 function Login() {
   const [username, setUsername] = useState('')
   const [password, setPassword] = useState('')
+  const [errorMessage, setErrorMessage] = useState<string | null>(null)
+  const [isSubmitting, setIsSubmitting] = useState(false)
   const navigate = useNavigate()
 
-  const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault()
 
     if (!username.trim() || !password.trim()) {
+      setErrorMessage('الرجاء إدخال اسم المستخدم وكلمة المرور')
       return
     }
 
-    navigate('/home')
+    try {
+      setIsSubmitting(true)
+      setErrorMessage(null)
+
+      const response = await fetch('/api/login', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          username: username.trim(),
+          password,
+        }),
+      })
+
+      const data = await response.json()
+
+      if (!response.ok) {
+        throw new Error(data?.message ?? 'فشل تسجيل الدخول')
+      }
+
+      navigate('/home')
+    } catch (error) {
+      const message =
+        error instanceof Error ? error.message : 'حدث خطأ غير متوقع'
+      setErrorMessage(message)
+    } finally {
+      setIsSubmitting(false)
+    }
   }
 
   return (
@@ -47,7 +78,15 @@ function Login() {
             />
           </label>
 
-          <button type="submit">تسجيل الدخول</button>
+          {errorMessage && (
+            <p className="login-form__error" role="alert">
+              {errorMessage}
+            </p>
+          )}
+
+          <button type="submit" disabled={isSubmitting}>
+            {isSubmitting ? 'جاري التحقق...' : 'تسجيل الدخول'}
+          </button>
         </form>
       </section>
     </main>
